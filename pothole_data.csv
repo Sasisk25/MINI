@@ -1,44 +1,44 @@
 id,city,district,latitude,longitude,pothole_count,severity
-1,Mumbai,Mumbai,19.044188,72.862267,15,Medium
+1,Mumbai,Mumbai,19.044188,72.862267,16,Medium
 2,Mumbai,Mumbai,19.115679,72.875096,15,Medium
 3,Mumbai,Mumbai,19.045229,72.831787,16,High
 4,Mumbai,Mumbai,19.042894,72.855559,15,Medium
-5,Mumbai,Mumbai,19.046633,72.864127,13,Medium
+5,Mumbai,Mumbai,19.046633,72.864127,14,Medium
 6,Navi Mumbai,Thane,19.033342,73.048739,16,Medium
-7,Navi Mumbai,Thane,19.070358,73.071787,14,Medium
+7,Navi Mumbai,Thane,19.070358,73.071787,15,Medium
 8,Navi Mumbai,Thane,18.989108,73.007388,16,Medium
 9,Thane,Thane,19.186752,72.949035,16,Medium
 10,Thane,Thane,19.205347,72.976552,16,Low
-11,Thane,Thane,19.214553,73.002847,16,High
-12,Thane,Thane,19.171968,72.953344,15,Medium
+11,Thane,Thane,19.214553,73.002847,15,High
+12,Thane,Thane,19.171968,72.953344,16,Medium
 13,Pune,Pune,18.521568,73.859911,14,Medium
 14,Pune,Pune,18.481117,73.851441,16,Low
 15,Pune,Pune,18.497324,73.844428,16,Medium
-16,Pune,Pune,18.472407,73.838908,15,Medium
+16,Pune,Pune,18.472407,73.838908,13,Medium
 17,Nashik,Nashik,19.959476,73.828853,16,Low
 18,Nashik,Nashik,20.006859,73.80771,16,Medium
 19,Nashik,Nashik,19.956192,73.793511,16,High
 20,Nashik,Nashik,20.006184,73.814344,16,Low
 21,Nagpur,Nagpur,21.124178,79.074508,16,Medium
-22,Nagpur,Nagpur,21.160392,79.095278,10,Low
+22,Nagpur,Nagpur,21.160392,79.095278,12,Low
 23,Nagpur,Nagpur,21.105978,79.053486,12,Medium
 24,Nagpur,Nagpur,21.120396,79.054268,16,Medium
 25,Nagpur,Nagpur,21.113137,79.127877,15,Medium
 26,Nagpur,Nagpur,21.103823,79.090651,15,Medium
 27,Aurangabad,Aurangabad,19.837404,75.333086,13,Medium
-28,Aurangabad,Aurangabad,19.923147,75.379851,15,Medium
-29,Aurangabad,Aurangabad,19.843289,75.360164,13,Medium
+28,Aurangabad,Aurangabad,19.923147,75.379851,16,Medium
+29,Aurangabad,Aurangabad,19.843289,75.360164,14,Medium
 30,Aurangabad,Aurangabad,19.919138,75.348976,16,Low
 31,Kolhapur,Kolhapur,16.731949,74.212004,16,Medium
 32,Kolhapur,Kolhapur,16.687368,74.235844,16,Low
-33,Kolhapur,Kolhapur,16.666484,74.254362,15,Medium
+33,Kolhapur,Kolhapur,16.666484,74.254362,16,Medium
 34,Kolhapur,Kolhapur,16.683863,74.251424,16,Medium
 35,Kolhapur,Kolhapur,16.708259,74.198482,16,Low
 36,Kolhapur,Kolhapur,16.68866,74.206741,16,Medium
 37,Solapur,Solapur,17.635364,75.92455,16,Medium
 38,Solapur,Solapur,17.685923,75.915964,16,Low
 39,Solapur,Solapur,17.644787,75.949353,16,Medium
-40,Solapur,Solapur,17.692962,75.952903,15,Medium
+40,Solapur,Solapur,17.692962,75.952903,14,Medium
 41,Ahmednagar,Ahmednagar,19.138634,74.716123,16,Medium
 42,Ahmednagar,Ahmednagar,19.05145,74.772112,13,Medium
 43,Ahmednagar,Ahmednagar,19.058777,74.777527,15,Medium
