@@ -1,17 +1,11 @@
 id,name,district,latitude,longitude
-1,Mumbai General Hospital,Mumbai,19.104409,72.905833
-2,Navi Mumbai General Hospital,Thane,19.042271,73.016096
-3,Thane General Hospital,Thane,19.240161,72.976493
-4,Pune General Hospital,Pune,18.502431,73.856196
-5,Nashik General Hospital,Nashik,19.982023,73.819
-6,Nagpur General Hospital,Nagpur,21.163835,79.070209
-7,Aurangabad General Hospital,Aurangabad,19.873339,75.351915
-8,Kolhapur General Hospital,Kolhapur,16.686973,74.254114
-9,Solapur General Hospital,Solapur,17.6591,75.928805
-10,Ahmednagar General Hospital,Ahmednagar,19.079634,74.770245
-11,Nerul General Hospital,Thane,19.02402,73.039633
-12,Seawoods General Hospital,Thane,19.007185,72.991125
-13,Belapur General Hospital,Thane,18.997711,73.048506
-14,Kharghar General Hospital,Raigad,19.018823,73.095657
-15,Panvel General Hospital,Raigad,19.012111,73.111748
-16,Ulwe General Hospital,Raigad,18.992713,73.033022
+1,Mumbai General Hospital,Mumbai,19.076353,72.884387
+2,Navi Mumbai General Hospital,Thane,19.06209,73.050034
+3,Thane General Hospital,Thane,19.23255,72.975233
+4,Pune General Hospital,Pune,18.494425,73.871698
+5,Nashik General Hospital,Nashik,19.976814,73.770716
+6,Nagpur General Hospital,Nagpur,21.121766,79.07279
+7,Aurangabad General Hospital,Aurangabad,19.861765,75.336082
+8,Kolhapur General Hospital,Kolhapur,16.700513,74.214648
+9,Solapur General Hospital,Solapur,17.668985,75.926185
+10,Ahmednagar General Hospital,Ahmednagar,19.079521,74.741358

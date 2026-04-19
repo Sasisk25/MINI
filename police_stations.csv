@@ -1,17 +1,11 @@
 id,name,district,latitude,longitude
-1,Mumbai Police Station,Mumbai,19.090979,72.855505
-2,Navi Mumbai Police Station,Thane,19.060052,73.008763
-3,Thane Police Station,Thane,19.246392,72.959232
-4,Pune Police Station,Pune,18.494253,73.861618
-5,Nashik Police Station,Nashik,19.97605,73.789733
-6,Nagpur Police Station,Nagpur,21.125849,79.064474
-7,Aurangabad Police Station,Aurangabad,19.877784,75.357195
-8,Kolhapur Police Station,Kolhapur,16.679332,74.215139
-9,Solapur Police Station,Solapur,17.683942,75.901703
-10,Ahmednagar Police Station,Ahmednagar,19.091518,74.748889
-11,Nerul Police Station,Thane,19.029653,73.004823
-12,Seawoods Police Station,Thane,19.02287,73.043896
-13,Belapur Police Station,Thane,19.043795,73.013734
-14,Kharghar Police Station,Raigad,19.058372,73.080391
-15,Panvel Police Station,Raigad,18.979022,73.127556
-16,Ulwe Police Station,Raigad,18.983653,73.028495
+1,Mumbai Police Station,Mumbai,19.047087,72.900027
+2,Navi Mumbai Police Station,Thane,19.01048,73.054951
+3,Thane Police Station,Thane,19.201776,72.975246
+4,Pune Police Station,Pune,18.502994,73.880583
+5,Nashik Police Station,Nashik,20.019207,73.816567
+6,Nagpur Police Station,Nagpur,21.159136,79.109542
+7,Aurangabad Police Station,Aurangabad,19.881618,75.329384
+8,Kolhapur Police Station,Kolhapur,16.691121,74.245798
+9,Solapur Police Station,Solapur,17.642285,75.87706
+10,Ahmednagar Police Station,Ahmednagar,19.082122,74.73934

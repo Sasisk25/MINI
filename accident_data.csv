@@ -1,233 +1,156 @@
 id,city,district,latitude,longitude,accident_count,severity,year,road_type
-1,Mumbai,Mumbai,19.077752,72.908689,17,High,2025,Highway
-2,Mumbai,Mumbai,19.050795,72.91939,15,High,2025,Intersection
-3,Mumbai,Mumbai,19.072517,72.913066,11,Medium,2025,Urban Road
-4,Mumbai,Mumbai,19.049079,72.859694,14,High,2025,Urban Road
-5,Mumbai,Mumbai,19.054187,72.850353,14,High,2025,Highway
-6,Mumbai,Mumbai,19.048595,72.853358,20,High,2025,Highway
-7,Mumbai,Mumbai,19.055152,72.870111,13,High,2025,Bypass
-8,Mumbai,Mumbai,19.085847,72.837308,13,High,2025,Highway
-9,Mumbai,Mumbai,19.064147,72.868442,16,High,2025,Highway
-10,Mumbai,Mumbai,19.088914,72.848093,12,High,2025,Urban Road
-11,Mumbai,Mumbai,19.034698,72.893784,22,High,2025,Highway
-12,Mumbai,Mumbai,19.04579,72.878214,9,Medium,2025,Urban Road
-13,Mumbai,Mumbai,19.05519,72.864805,15,High,2025,Bypass
-14,Mumbai,Mumbai,19.036862,72.86525,13,High,2025,Urban Road
-15,Navi Mumbai,Thane,19.001261,73.010074,13,High,2025,Intersection
-16,Navi Mumbai,Thane,18.996951,73.020928,21,High,2025,Highway
-17,Navi Mumbai,Thane,18.991351,73.031308,10,Medium,2025,Urban Road
-18,Navi Mumbai,Thane,18.985935,73.031838,14,High,2025,Bypass
-19,Navi Mumbai,Thane,19.013988,73.02838,12,High,2025,Intersection
-20,Navi Mumbai,Thane,19.020238,73.024152,13,High,2025,Intersection
-21,Navi Mumbai,Thane,18.99895,73.001762,9,Medium,2025,Urban Road
-22,Navi Mumbai,Thane,19.062265,73.036842,10,Medium,2025,Intersection
-23,Navi Mumbai,Thane,19.03156,73.046483,19,High,2025,Highway
-24,Navi Mumbai,Thane,19.057615,73.037705,23,High,2025,Highway
-25,Navi Mumbai,Thane,19.047685,73.035055,12,High,2025,Bypass
-26,Navi Mumbai,Thane,19.038164,73.020186,14,High,2025,Intersection
-27,Navi Mumbai,Thane,19.018276,73.040436,12,High,2025,Intersection
-28,Navi Mumbai,Thane,19.039049,73.042539,13,High,2025,Intersection
-29,Thane,Thane,19.238451,72.987851,17,High,2025,Highway
-30,Thane,Thane,19.238602,73.016232,14,High,2025,Bypass
-31,Thane,Thane,19.219024,72.98479,15,High,2025,Highway
-32,Thane,Thane,19.239025,73.014817,9,Medium,2025,Intersection
-33,Thane,Thane,19.206582,73.000818,9,Medium,2025,Intersection
-34,Thane,Thane,19.211099,72.993893,10,Medium,2025,Urban Road
-35,Thane,Thane,19.245627,72.975613,18,High,2025,Highway
-36,Thane,Thane,19.263373,72.957563,11,Medium,2025,Urban Road
-37,Thane,Thane,19.244765,72.959527,14,High,2025,Intersection
-38,Pune,Pune,18.50982,73.833001,28,High,2025,Highway
-39,Pune,Pune,18.479285,73.842997,15,High,2025,Bypass
-40,Pune,Pune,18.482995,73.852548,18,High,2025,Intersection
-41,Pune,Pune,18.4882,73.848711,14,High,2025,Bypass
-42,Pune,Pune,18.488648,73.864279,18,High,2025,Urban Road
-43,Pune,Pune,18.477448,73.880454,10,Medium,2025,Intersection
-44,Pune,Pune,18.501624,73.863793,15,High,2025,Intersection
-45,Pune,Pune,18.503455,73.872287,10,Medium,2025,Urban Road
-46,Pune,Pune,18.512805,73.891912,14,High,2025,Intersection
-47,Nashik,Nashik,19.995665,73.801607,6,Low,2025,Urban Road
-48,Nashik,Nashik,19.9667,73.815288,11,Medium,2025,Urban Road
-49,Nashik,Nashik,19.998993,73.804723,7,Medium,2025,Urban Road
-50,Nashik,Nashik,20.02654,73.824822,7,Medium,2025,Bypass
-51,Nashik,Nashik,20.016738,73.796993,14,High,2025,Intersection
-52,Nashik,Nashik,19.991259,73.800059,9,Medium,2025,Urban Road
-53,Nashik,Nashik,20.013006,73.821303,9,Medium,2025,Intersection
-54,Nashik,Nashik,20.019544,73.803117,18,High,2025,Highway
-55,Nashik,Nashik,20.004073,73.823487,14,High,2025,Urban Road
-56,Nashik,Nashik,19.990704,73.788608,15,High,2025,Intersection
-57,Nashik,Nashik,19.997565,73.783659,11,Medium,2025,Bypass
-58,Nashik,Nashik,20.022639,73.799145,14,High,2025,Intersection
-59,Nashik,Nashik,20.018265,73.789659,13,High,2025,Urban Road
-60,Nashik,Nashik,20.00642,73.770931,10,Medium,2025,Intersection
-61,Nashik,Nashik,20.021008,73.777042,10,Medium,2025,Urban Road
-62,Nagpur,Nagpur,21.113854,79.132565,13,High,2025,Bypass
-63,Nagpur,Nagpur,21.135272,79.128019,9,Medium,2025,Bypass
+1,Mumbai,Mumbai,19.077752,72.908689,23,High,2025,Highway
+2,Mumbai,Mumbai,19.050795,72.91939,25,High,2025,Intersection
+3,Mumbai,Mumbai,19.072517,72.913066,25,Medium,2025,Urban Road
+4,Mumbai,Mumbai,19.049079,72.859694,23,High,2025,Urban Road
+5,Mumbai,Mumbai,19.054187,72.850353,20,High,2025,Highway
+6,Mumbai,Mumbai,19.048595,72.853358,25,High,2025,Highway
+7,Mumbai,Mumbai,19.055152,72.870111,18,High,2025,Bypass
+8,Mumbai,Mumbai,19.085847,72.837308,17,High,2025,Highway
+9,Mumbai,Mumbai,19.064147,72.868442,25,High,2025,Highway
+10,Mumbai,Mumbai,19.088914,72.848093,16,High,2025,Urban Road
+11,Mumbai,Mumbai,19.034698,72.893784,25,High,2025,Highway
+12,Mumbai,Mumbai,19.04579,72.878214,21,Medium,2025,Urban Road
+13,Mumbai,Mumbai,19.05519,72.864805,25,High,2025,Bypass
+14,Mumbai,Mumbai,19.036862,72.86525,18,High,2025,Urban Road
+15,Navi Mumbai,Thane,19.001261,73.010074,24,High,2025,Intersection
+16,Navi Mumbai,Thane,18.996951,73.020928,25,High,2025,Highway
+17,Navi Mumbai,Thane,18.991351,73.031308,16,Medium,2025,Urban Road
+18,Navi Mumbai,Thane,18.985935,73.031838,24,High,2025,Bypass
+19,Navi Mumbai,Thane,19.013988,73.02838,21,High,2025,Intersection
+20,Navi Mumbai,Thane,19.020238,73.024152,24,High,2025,Intersection
+21,Navi Mumbai,Thane,18.99895,73.001762,11,Medium,2025,Urban Road
+22,Navi Mumbai,Thane,19.062265,73.036842,15,Medium,2025,Intersection
+23,Navi Mumbai,Thane,19.03156,73.046483,25,High,2025,Highway
+24,Navi Mumbai,Thane,19.057615,73.037705,25,High,2025,Highway
+25,Navi Mumbai,Thane,19.047685,73.035055,17,High,2025,Bypass
+26,Navi Mumbai,Thane,19.038164,73.020186,25,High,2025,Intersection
+27,Navi Mumbai,Thane,19.018276,73.040436,19,High,2025,Intersection
+28,Navi Mumbai,Thane,19.039049,73.042539,19,High,2025,Intersection
+29,Thane,Thane,19.238451,72.987851,25,High,2025,Highway
+30,Thane,Thane,19.238602,73.016232,25,High,2025,Bypass
+31,Thane,Thane,19.219024,72.98479,25,High,2025,Highway
+32,Thane,Thane,19.239025,73.014817,17,Medium,2025,Intersection
+33,Thane,Thane,19.206582,73.000818,25,Medium,2025,Intersection
+34,Thane,Thane,19.211099,72.993893,12,Medium,2025,Urban Road
+35,Thane,Thane,19.245627,72.975613,25,High,2025,Highway
+36,Thane,Thane,19.263373,72.957563,24,Medium,2025,Urban Road
+37,Thane,Thane,19.244765,72.959527,25,High,2025,Intersection
+38,Pune,Pune,18.50982,73.833001,25,High,2025,Highway
+39,Pune,Pune,18.479285,73.842997,24,High,2025,Bypass
+40,Pune,Pune,18.482995,73.852548,24,High,2025,Intersection
+41,Pune,Pune,18.4882,73.848711,25,High,2025,Bypass
+42,Pune,Pune,18.488648,73.864279,25,High,2025,Urban Road
+43,Pune,Pune,18.477448,73.880454,18,Medium,2025,Intersection
+44,Pune,Pune,18.501624,73.863793,19,High,2025,Intersection
+45,Pune,Pune,18.503455,73.872287,18,Medium,2025,Urban Road
+46,Pune,Pune,18.512805,73.891912,24,High,2025,Intersection
+47,Nashik,Nashik,19.995665,73.801607,8,Low,2025,Urban Road
+48,Nashik,Nashik,19.9667,73.815288,17,Medium,2025,Urban Road
+49,Nashik,Nashik,19.998993,73.804723,20,Medium,2025,Urban Road
+50,Nashik,Nashik,20.02654,73.824822,16,Medium,2025,Bypass
+51,Nashik,Nashik,20.016738,73.796993,23,High,2025,Intersection
+52,Nashik,Nashik,19.991259,73.800059,17,Medium,2025,Urban Road
+53,Nashik,Nashik,20.013006,73.821303,15,Medium,2025,Intersection
+54,Nashik,Nashik,20.019544,73.803117,24,High,2025,Highway
+55,Nashik,Nashik,20.004073,73.823487,23,High,2025,Urban Road
+56,Nashik,Nashik,19.990704,73.788608,20,High,2025,Intersection
+57,Nashik,Nashik,19.997565,73.783659,21,Medium,2025,Bypass
+58,Nashik,Nashik,20.022639,73.799145,25,High,2025,Intersection
+59,Nashik,Nashik,20.018265,73.789659,20,High,2025,Urban Road
+60,Nashik,Nashik,20.00642,73.770931,19,Medium,2025,Intersection
+61,Nashik,Nashik,20.021008,73.777042,25,Medium,2025,Urban Road
+62,Nagpur,Nagpur,21.113854,79.132565,22,High,2025,Bypass
+63,Nagpur,Nagpur,21.135272,79.128019,22,Medium,2025,Bypass
 64,Nagpur,Nagpur,21.130772,79.106576,7,Medium,2025,Urban Road
-65,Nagpur,Nagpur,21.103507,79.116171,14,High,2025,Intersection
-66,Nagpur,Nagpur,21.119529,79.097786,12,High,2025,Urban Road
-67,Nagpur,Nagpur,21.121327,79.133501,12,High,2025,Urban Road
-68,Nagpur,Nagpur,21.176323,79.110745,10,Medium,2025,Intersection
-69,Nagpur,Nagpur,21.162822,79.09439,13,High,2025,Bypass
-70,Nagpur,Nagpur,21.183125,79.119176,13,High,2025,Bypass
-71,Nagpur,Nagpur,21.168896,79.102707,16,High,2025,Intersection
-72,Nagpur,Nagpur,21.176521,79.114478,15,High,2025,Urban Road
-73,Nagpur,Nagpur,21.184042,79.096166,9,Medium,2025,Urban Road
-74,Nagpur,Nagpur,21.171573,79.084084,11,Medium,2025,Bypass
-75,Nagpur,Nagpur,21.135198,79.094392,14,High,2025,Highway
-76,Nagpur,Nagpur,21.128818,79.091649,21,High,2025,Highway
-77,Nagpur,Nagpur,21.154536,79.079392,9,Medium,2025,Urban Road
-78,Nagpur,Nagpur,21.120526,79.095578,12,High,2025,Bypass
-79,Nagpur,Nagpur,21.127945,79.109115,8,Medium,2025,Highway
-80,Nagpur,Nagpur,21.130708,79.080914,12,High,2025,Bypass
+65,Nagpur,Nagpur,21.103507,79.116171,24,High,2025,Intersection
+66,Nagpur,Nagpur,21.119529,79.097786,25,High,2025,Urban Road
+67,Nagpur,Nagpur,21.121327,79.133501,25,High,2025,Urban Road
+68,Nagpur,Nagpur,21.176323,79.110745,23,Medium,2025,Intersection
+69,Nagpur,Nagpur,21.162822,79.09439,18,High,2025,Bypass
+70,Nagpur,Nagpur,21.183125,79.119176,15,High,2025,Bypass
+71,Nagpur,Nagpur,21.168896,79.102707,25,High,2025,Intersection
+72,Nagpur,Nagpur,21.176521,79.114478,25,High,2025,Urban Road
+73,Nagpur,Nagpur,21.184042,79.096166,21,Medium,2025,Urban Road
+74,Nagpur,Nagpur,21.171573,79.084084,17,Medium,2025,Bypass
+75,Nagpur,Nagpur,21.135198,79.094392,25,High,2025,Highway
+76,Nagpur,Nagpur,21.128818,79.091649,24,High,2025,Highway
+77,Nagpur,Nagpur,21.154536,79.079392,22,Medium,2025,Urban Road
+78,Nagpur,Nagpur,21.120526,79.095578,25,High,2025,Bypass
+79,Nagpur,Nagpur,21.127945,79.109115,20,Medium,2025,Highway
+80,Nagpur,Nagpur,21.130708,79.080914,25,High,2025,Bypass
 81,Nagpur,Nagpur,21.11646,79.073219,13,High,2025,Bypass
-82,Aurangabad,Aurangabad,19.856994,75.313708,16,High,2025,Intersection
-83,Aurangabad,Aurangabad,19.872706,75.332282,10,Medium,2025,Highway
-84,Aurangabad,Aurangabad,19.888932,75.333214,19,High,2025,Highway
-85,Aurangabad,Aurangabad,19.872911,75.328167,8,Medium,2025,Intersection
-86,Aurangabad,Aurangabad,19.864976,75.334012,11,Medium,2025,Intersection
-87,Aurangabad,Aurangabad,19.851313,75.308341,17,High,2025,Highway
-88,Aurangabad,Aurangabad,19.874315,75.318109,13,High,2025,Bypass
-89,Aurangabad,Aurangabad,19.861578,75.316524,15,High,2025,Urban Road
-90,Aurangabad,Aurangabad,19.880054,75.300982,6,Low,2025,Bypass
-91,Aurangabad,Aurangabad,19.869635,75.324204,20,High,2025,Highway
-92,Aurangabad,Aurangabad,19.880998,75.305687,13,High,2025,Intersection
-93,Aurangabad,Aurangabad,19.831494,75.355276,11,Medium,2025,Urban Road
-94,Aurangabad,Aurangabad,19.845961,75.357577,18,High,2025,Highway
-95,Aurangabad,Aurangabad,19.848764,75.35367,12,High,2025,Intersection
-96,Aurangabad,Aurangabad,19.868882,75.368059,12,High,2025,Urban Road
-97,Aurangabad,Aurangabad,19.838266,75.334619,11,Medium,2025,Urban Road
-98,Aurangabad,Aurangabad,19.833282,75.344604,11,Medium,2025,Intersection
-99,Aurangabad,Aurangabad,19.864229,75.332776,9,Medium,2025,Urban Road
-100,Aurangabad,Aurangabad,19.858448,75.370203,19,High,2025,Highway
-101,Aurangabad,Aurangabad,19.862693,75.367243,10,Medium,2025,Intersection
-102,Aurangabad,Aurangabad,19.863315,75.367377,9,Medium,2025,Bypass
-103,Aurangabad,Aurangabad,19.87291,75.351609,20,High,2025,Highway
-104,Aurangabad,Aurangabad,19.846922,75.372334,13,High,2025,Highway
-105,Aurangabad,Aurangabad,19.867627,75.352264,16,High,2025,Intersection
-106,Aurangabad,Aurangabad,19.837415,75.371206,16,High,2025,Intersection
-107,Kolhapur,Kolhapur,16.698117,74.278708,11,Medium,2025,Urban Road
-108,Kolhapur,Kolhapur,16.723339,74.265825,14,High,2025,Highway
-109,Kolhapur,Kolhapur,16.710588,74.260825,11,Medium,2025,Highway
-110,Kolhapur,Kolhapur,16.727014,74.270027,10,Medium,2025,Highway
-111,Kolhapur,Kolhapur,16.698999,74.258219,10,Medium,2025,Urban Road
-112,Kolhapur,Kolhapur,16.713012,74.27395,8,Medium,2025,Urban Road
-113,Kolhapur,Kolhapur,16.709388,74.243125,11,Medium,2025,Bypass
-114,Kolhapur,Kolhapur,16.72008,74.242487,9,Medium,2025,Urban Road
-115,Kolhapur,Kolhapur,16.698715,74.266481,11,Medium,2025,Intersection
-116,Solapur,Solapur,17.629961,75.930424,11,Medium,2025,Bypass
-117,Solapur,Solapur,17.647502,75.953488,8,Medium,2025,Urban Road
-118,Solapur,Solapur,17.646076,75.937934,10,Medium,2025,Urban Road
-119,Solapur,Solapur,17.631959,75.951852,13,High,2025,Intersection
-120,Solapur,Solapur,17.615444,75.934344,8,Medium,2025,Bypass
-121,Solapur,Solapur,17.617242,75.920351,14,High,2025,Intersection
-122,Solapur,Solapur,17.644832,75.938933,8,Medium,2025,Bypass
-123,Solapur,Solapur,17.679058,75.913636,11,Medium,2025,Bypass
-124,Solapur,Solapur,17.670582,75.901046,15,High,2025,Highway
-125,Solapur,Solapur,17.706402,75.899816,15,High,2025,Urban Road
-126,Solapur,Solapur,17.685812,75.903994,13,High,2025,Urban Road
-127,Solapur,Solapur,17.691003,75.914938,24,High,2025,Highway
-128,Solapur,Solapur,17.678725,75.886417,10,Medium,2025,Intersection
-129,Solapur,Solapur,17.686178,75.893026,12,High,2025,Highway
-130,Solapur,Solapur,17.69629,75.937017,11,Medium,2025,Urban Road
-131,Solapur,Solapur,17.680745,75.948125,8,Medium,2025,Urban Road
-132,Solapur,Solapur,17.704801,75.948474,17,High,2025,Highway
-133,Solapur,Solapur,17.706356,75.944602,10,Medium,2025,Highway
-134,Solapur,Solapur,17.705673,75.950216,23,High,2025,Highway
-135,Solapur,Solapur,17.670173,75.916628,14,High,2025,Urban Road
-136,Solapur,Solapur,17.707855,75.92159,13,High,2025,Highway
-137,Solapur,Solapur,17.684345,75.912938,12,High,2025,Intersection
-138,Solapur,Solapur,17.662141,75.890189,20,High,2025,Highway
-139,Solapur,Solapur,17.647803,75.913842,11,Medium,2025,Urban Road
-140,Ahmednagar,Ahmednagar,19.124925,74.76458,10,Medium,2025,Urban Road
+82,Aurangabad,Aurangabad,19.856994,75.313708,25,High,2025,Intersection
+83,Aurangabad,Aurangabad,19.872706,75.332282,20,Medium,2025,Highway
+84,Aurangabad,Aurangabad,19.888932,75.333214,23,High,2025,Highway
+85,Aurangabad,Aurangabad,19.872911,75.328167,13,Medium,2025,Intersection
+86,Aurangabad,Aurangabad,19.864976,75.334012,20,Medium,2025,Intersection
+87,Aurangabad,Aurangabad,19.851313,75.308341,24,High,2025,Highway
+88,Aurangabad,Aurangabad,19.874315,75.318109,25,High,2025,Bypass
+89,Aurangabad,Aurangabad,19.861578,75.316524,22,High,2025,Urban Road
+90,Aurangabad,Aurangabad,19.880054,75.300982,7,Low,2025,Bypass
+91,Aurangabad,Aurangabad,19.869635,75.324204,25,High,2025,Highway
+92,Aurangabad,Aurangabad,19.880998,75.305687,22,High,2025,Intersection
+93,Aurangabad,Aurangabad,19.831494,75.355276,10,Medium,2025,Urban Road
+94,Aurangabad,Aurangabad,19.845961,75.357577,25,High,2025,Highway
+95,Aurangabad,Aurangabad,19.848764,75.35367,15,High,2025,Intersection
+96,Aurangabad,Aurangabad,19.868882,75.368059,14,High,2025,Urban Road
+97,Aurangabad,Aurangabad,19.838266,75.334619,16,Medium,2025,Urban Road
+98,Aurangabad,Aurangabad,19.833282,75.344604,20,Medium,2025,Intersection
+99,Aurangabad,Aurangabad,19.864229,75.332776,12,Medium,2025,Urban Road
+100,Aurangabad,Aurangabad,19.858448,75.370203,25,High,2025,Highway
+101,Aurangabad,Aurangabad,19.862693,75.367243,20,Medium,2025,Intersection
+102,Aurangabad,Aurangabad,19.863315,75.367377,12,Medium,2025,Bypass
+103,Aurangabad,Aurangabad,19.87291,75.351609,25,High,2025,Highway
+104,Aurangabad,Aurangabad,19.846922,75.372334,22,High,2025,Highway
+105,Aurangabad,Aurangabad,19.867627,75.352264,24,High,2025,Intersection
+106,Aurangabad,Aurangabad,19.837415,75.371206,25,High,2025,Intersection
+107,Kolhapur,Kolhapur,16.698117,74.278708,22,Medium,2025,Urban Road
+108,Kolhapur,Kolhapur,16.723339,74.265825,25,High,2025,Highway
+109,Kolhapur,Kolhapur,16.710588,74.260825,13,Medium,2025,Highway
+110,Kolhapur,Kolhapur,16.727014,74.270027,15,Medium,2025,Highway
+111,Kolhapur,Kolhapur,16.698999,74.258219,24,Medium,2025,Urban Road
+112,Kolhapur,Kolhapur,16.713012,74.27395,22,Medium,2025,Urban Road
+113,Kolhapur,Kolhapur,16.709388,74.243125,25,Medium,2025,Bypass
+114,Kolhapur,Kolhapur,16.72008,74.242487,11,Medium,2025,Urban Road
+115,Kolhapur,Kolhapur,16.698715,74.266481,20,Medium,2025,Intersection
+116,Solapur,Solapur,17.629961,75.930424,21,Medium,2025,Bypass
+117,Solapur,Solapur,17.647502,75.953488,20,Medium,2025,Urban Road
+118,Solapur,Solapur,17.646076,75.937934,25,Medium,2025,Urban Road
+119,Solapur,Solapur,17.631959,75.951852,19,High,2025,Intersection
+120,Solapur,Solapur,17.615444,75.934344,14,Medium,2025,Bypass
+121,Solapur,Solapur,17.617242,75.920351,18,High,2025,Intersection
+122,Solapur,Solapur,17.644832,75.938933,13,Medium,2025,Bypass
+123,Solapur,Solapur,17.679058,75.913636,21,Medium,2025,Bypass
+124,Solapur,Solapur,17.670582,75.901046,22,High,2025,Highway
+125,Solapur,Solapur,17.706402,75.899816,24,High,2025,Urban Road
+126,Solapur,Solapur,17.685812,75.903994,25,High,2025,Urban Road
+127,Solapur,Solapur,17.691003,75.914938,25,High,2025,Highway
+128,Solapur,Solapur,17.678725,75.886417,22,Medium,2025,Intersection
+129,Solapur,Solapur,17.686178,75.893026,24,High,2025,Highway
+130,Solapur,Solapur,17.69629,75.937017,22,Medium,2025,Urban Road
+131,Solapur,Solapur,17.680745,75.948125,4,Medium,2025,Urban Road
+132,Solapur,Solapur,17.704801,75.948474,23,High,2025,Highway
+133,Solapur,Solapur,17.706356,75.944602,20,Medium,2025,Highway
+134,Solapur,Solapur,17.705673,75.950216,25,High,2025,Highway
+135,Solapur,Solapur,17.670173,75.916628,24,High,2025,Urban Road
+136,Solapur,Solapur,17.707855,75.92159,25,High,2025,Highway
+137,Solapur,Solapur,17.684345,75.912938,25,High,2025,Intersection
+138,Solapur,Solapur,17.662141,75.890189,23,High,2025,Highway
+139,Solapur,Solapur,17.647803,75.913842,17,Medium,2025,Urban Road
+140,Ahmednagar,Ahmednagar,19.124925,74.76458,23,Medium,2025,Urban Road
 141,Ahmednagar,Ahmednagar,19.108961,74.759852,11,Medium,2025,Urban Road
-142,Ahmednagar,Ahmednagar,19.100085,74.781554,12,High,2025,Bypass
-143,Ahmednagar,Ahmednagar,19.115664,74.769013,11,Medium,2025,Urban Road
+142,Ahmednagar,Ahmednagar,19.100085,74.781554,25,High,2025,Bypass
+143,Ahmednagar,Ahmednagar,19.115664,74.769013,18,Medium,2025,Urban Road
 144,Ahmednagar,Ahmednagar,19.111751,74.785579,8,Medium,2025,Bypass
-145,Ahmednagar,Ahmednagar,19.111746,74.788773,16,High,2025,Bypass
-146,Ahmednagar,Ahmednagar,19.10276,74.72336,22,High,2025,Highway
-147,Ahmednagar,Ahmednagar,19.127604,74.747021,11,Medium,2025,Highway
-148,Ahmednagar,Ahmednagar,19.102854,74.722791,12,High,2025,Bypass
-149,Ahmednagar,Ahmednagar,19.111423,74.745806,8,Medium,2025,Intersection
-150,Ahmednagar,Ahmednagar,19.11961,74.750241,4,Low,2025,Bypass
-151,Ahmednagar,Ahmednagar,19.114912,74.743778,5,Low,2025,Bypass
-152,Ahmednagar,Ahmednagar,19.117415,74.758096,15,High,2025,Highway
-153,Ahmednagar,Ahmednagar,19.118755,74.732045,9,Medium,2025,Highway
-154,Ahmednagar,Ahmednagar,19.102085,74.72405,17,High,2025,Highway
-155,Ahmednagar,Ahmednagar,19.104172,74.724971,11,Medium,2025,Bypass
-156,Nerul,Thane,19.030585,73.009598,13,High,2025,Highway
-157,Nerul,Thane,19.021415,72.997533,10,Medium,2025,Urban Road
-158,Nerul,Thane,19.001793,72.994188,9,Medium,2025,Urban Road
-159,Nerul,Thane,18.999538,73.009071,10,Medium,2025,Urban Road
-160,Nerul,Thane,19.01485,73.018256,8,Medium,2025,Bypass
-161,Nerul,Thane,19.011275,73.021135,11,Medium,2025,Bypass
-162,Nerul,Thane,19.018407,73.047795,11,Medium,2025,Urban Road
-163,Nerul,Thane,18.99354,73.026239,13,High,2025,Intersection
-164,Nerul,Thane,19.010889,73.032622,5,Low,2025,Bypass
-165,Nerul,Thane,19.013019,73.024845,19,High,2025,Highway
-166,Nerul,Thane,19.032019,73.036033,12,High,2025,Bypass
-167,Nerul,Thane,19.015839,73.032644,10,Medium,2025,Highway
-168,Nerul,Thane,19.022322,73.029839,17,High,2025,Highway
-169,Nerul,Thane,18.993462,73.002325,23,High,2025,Highway
-170,Nerul,Thane,19.016571,73.009163,20,High,2025,Highway
-171,Nerul,Thane,18.988481,73.010709,16,High,2025,Urban Road
-172,Nerul,Thane,19.00227,72.994328,13,High,2025,Urban Road
-173,Nerul,Thane,18.996355,73.003748,14,High,2025,Bypass
-174,Nerul,Thane,18.999248,73.028686,17,High,2025,Bypass
-175,Nerul,Thane,19.009235,72.998714,10,Medium,2025,Bypass
-176,Seawoods,Thane,18.989129,73.020677,14,High,2025,Highway
-177,Seawoods,Thane,18.985403,73.005786,12,High,2025,Urban Road
-178,Seawoods,Thane,18.986676,73.00072,11,Medium,2025,Bypass
-179,Seawoods,Thane,19.020973,73.019426,14,High,2025,Highway
-180,Seawoods,Thane,18.98903,73.011552,14,High,2025,Bypass
-181,Seawoods,Thane,19.019369,73.007077,8,Medium,2025,Intersection
-182,Seawoods,Thane,19.030117,72.99594,16,High,2025,Intersection
-183,Seawoods,Thane,19.037474,72.988619,12,High,2025,Bypass
-184,Seawoods,Thane,19.028715,73.002173,9,Medium,2025,Bypass
-185,Seawoods,Thane,19.023345,72.998169,10,Medium,2025,Urban Road
-186,Seawoods,Thane,19.030634,72.9843,12,High,2025,Urban Road
-187,Seawoods,Thane,19.019705,73.018521,17,High,2025,Intersection
-188,Belapur,Thane,19.011287,73.052816,14,High,2025,Highway
-189,Belapur,Thane,18.999741,73.045464,16,High,2025,Intersection
-190,Belapur,Thane,19.014103,73.067591,15,High,2025,Highway
-191,Belapur,Thane,19.010592,73.039201,11,Medium,2025,Bypass
-192,Belapur,Thane,18.996037,73.065625,11,Medium,2025,Urban Road
-193,Belapur,Thane,18.978649,73.063763,14,High,2025,Highway
-194,Kharghar,Raigad,19.033464,73.089597,10,Medium,2025,Urban Road
-195,Kharghar,Raigad,19.021209,73.103762,21,High,2025,Highway
-196,Kharghar,Raigad,19.024421,73.083752,15,High,2025,Highway
-197,Kharghar,Raigad,19.054665,73.057992,12,High,2025,Bypass
-198,Kharghar,Raigad,19.040117,73.059625,15,High,2025,Highway
-199,Kharghar,Raigad,19.06102,73.062853,7,Medium,2025,Urban Road
-200,Kharghar,Raigad,19.030332,73.069644,21,High,2025,Highway
-201,Kharghar,Raigad,19.06996,73.083352,14,High,2025,Highway
-202,Kharghar,Raigad,19.044144,73.081566,9,Medium,2025,Bypass
-203,Kharghar,Raigad,19.035545,73.074604,15,High,2025,Intersection
-204,Kharghar,Raigad,19.047887,73.084658,15,High,2025,Intersection
-205,Kharghar,Raigad,19.038629,73.085666,11,Medium,2025,Urban Road
-206,Kharghar,Raigad,19.066096,73.057805,10,Medium,2025,Intersection
-207,Kharghar,Raigad,19.043374,73.080698,14,High,2025,Urban Road
-208,Kharghar,Raigad,19.048709,73.066191,15,High,2025,Bypass
-209,Kharghar,Raigad,19.045901,73.088701,6,Low,2025,Urban Road
-210,Kharghar,Raigad,19.057117,73.090254,19,High,2025,Intersection
-211,Kharghar,Raigad,19.044771,73.075812,18,High,2025,Bypass
-212,Kharghar,Raigad,19.039361,73.087248,14,High,2025,Intersection
-213,Panvel,Raigad,19.023193,73.138308,9,Medium,2025,Bypass
-214,Panvel,Raigad,19.018379,73.125677,18,High,2025,Highway
-215,Panvel,Raigad,19.012292,73.130866,12,High,2025,Highway
-216,Panvel,Raigad,19.003477,73.154668,11,Medium,2025,Urban Road
-217,Panvel,Raigad,19.033286,73.138588,8,Medium,2025,Intersection
-218,Panvel,Raigad,19.00068,73.131242,15,High,2025,Urban Road
-219,Panvel,Raigad,19.030604,73.118019,10,Medium,2025,Intersection
-220,Panvel,Raigad,19.019986,73.154628,9,Medium,2025,Highway
-221,Panvel,Raigad,19.012344,73.131712,10,Medium,2025,Urban Road
-222,Panvel,Raigad,19.007474,73.135932,19,High,2025,Intersection
-223,Ulwe,Raigad,18.977786,73.01344,10,Medium,2025,Bypass
-224,Ulwe,Raigad,18.981075,73.021974,16,High,2025,Intersection
-225,Ulwe,Raigad,18.958375,73.023224,15,High,2025,Highway
-226,Ulwe,Raigad,18.961265,73.036558,10,Medium,2025,Intersection
-227,Ulwe,Raigad,18.982215,73.051821,12,High,2025,Urban Road
-228,Ulwe,Raigad,18.987738,73.029451,13,High,2025,Intersection
-229,Ulwe,Raigad,18.980994,73.040706,13,High,2025,Highway
-230,Ulwe,Raigad,19.016908,73.030928,11,Medium,2025,Urban Road
-231,Ulwe,Raigad,19.011963,73.035683,12,High,2025,Intersection
-232,Ulwe,Raigad,19.030403,73.051142,12,High,2025,Intersection
+145,Ahmednagar,Ahmednagar,19.111746,74.788773,25,High,2025,Bypass
+146,Ahmednagar,Ahmednagar,19.10276,74.72336,24,High,2025,Highway
+147,Ahmednagar,Ahmednagar,19.127604,74.747021,25,Medium,2025,Highway
+148,Ahmednagar,Ahmednagar,19.102854,74.722791,25,High,2025,Bypass
+149,Ahmednagar,Ahmednagar,19.111423,74.745806,11,Medium,2025,Intersection
+150,Ahmednagar,Ahmednagar,19.11961,74.750241,10,Low,2025,Bypass
+151,Ahmednagar,Ahmednagar,19.114912,74.743778,17,Low,2025,Bypass
+152,Ahmednagar,Ahmednagar,19.117415,74.758096,20,High,2025,Highway
+153,Ahmednagar,Ahmednagar,19.118755,74.732045,10,Medium,2025,Highway
+154,Ahmednagar,Ahmednagar,19.102085,74.72405,24,High,2025,Highway
+155,Ahmednagar,Ahmednagar,19.104172,74.724971,21,Medium,2025,Bypass
