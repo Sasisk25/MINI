@@ -184,5 +184,3 @@ id,hazard_type,city,district,latitude,longitude,description,timestamp
 183,roadblock,Amravati,Amravati,20.937605,77.779117,Auto synthetic live update: roadblock,2026-04-09 14:23:16
 184,pothole,Turbhe,Thane,19.059466,73.013638,Auto synthetic live update: pothole,2026-04-09 14:23:34
 185,waterlogging,Sangli,Sangli,16.852743,74.574285,Auto synthetic live update: waterlogging,2026-04-09 14:23:57
-186,waterlogging,Juinagar,Thane,19.041977,73.009821,Auto synthetic live update: waterlogging,2026-04-17 09:18:40
-187,pothole,Kolhapur,Kolhapur,16.711233,74.249652,Auto synthetic live update: pothole,2026-04-17 09:20:38

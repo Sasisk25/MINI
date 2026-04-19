@@ -3,189 +3,278 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Road Safety Navigation Assistant</title>
+    <title>SafeRoute AI — Smart Road Safety Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
     <div id="map"></div>
 
-    <header class="app-header glass-card">
-        <div>
-            <h1>Smart Road Safety Navigation Assistant</h1>
-            <p>Predict risk, compare routes, and drive safer using AI + community reports.</p>
-        </div>
-        <span class="header-badge">Local Prototype</span>
-    </header>
-
-    <section id="alert-banner" class="alert-banner info-neutral">
-        <span id="alert-pill" class="alert-pill">LIVE</span>
-        <span id="alert-text">Live monitoring active. Select a location or route.</span>
-    </section>
-
-    <section class="control-panel glass-card">
-        <h3>Search / Route Input</h3>
-        <div class="control-row">
-            <input id="citySearch" type="text" list="location-options" placeholder="Search city/locality (Mumbai, Nerul, Seawoods, Kharghar...)" />
-            <button onclick="searchCity()">Find Area</button>
-            <button onclick="useMyLocation()" id="my-location-btn">Use My Location</button>
-            <button id="reportBtn" onclick="toggleReporting()">Report Hazard</button>
-        </div>
-        <div class="control-row">
-            <input id="routeStart" type="text" list="location-options" placeholder="Route start (city/locality)" />
-            <input id="routeEnd" type="text" list="location-options" placeholder="Route end (city/locality)" />
-            <button onclick="planMyTrip()" id="plan-trip-btn">Plan My Trip</button>
-            <button onclick="analyzeRoute()">Compare Routes</button>
-            <button onclick="startGuidedDemo()" id="guided-demo-btn">Guided Demo</button>
-            <button onclick="demoReset()" id="demo-reset-btn">Demo Reset</button>
-            <button onclick="resetView()">Reset</button>
-        </div>
-        <div class="control-row toggle-row">
-            <span class="mode-pill">Night view: Always ON</span>
-            <span class="mode-pill">Weather context: Auto real-time</span>
-            <span class="mode-pill">Live updates: Always ON</span>
-            <span id="mode-feedback" class="mode-feedback">Modes: Normal</span>
-            <span id="loading-indicator">Updating...</span>
-        </div>
-        <p id="demo-narration" class="demo-narration">Demo assistant ready. Click "Guided Demo" for automatic walkthrough.</p>
-    </section>
-
-    <section id="trip-reco-banner" class="trip-reco-banner glass-card">
-        <span class="trip-reco-label">Recommended Action</span>
-        <span id="trip-reco-text">Analyze a route to get your best travel action.</span>
-    </section>
-
-    <section class="left-stack">
-        <article class="glass-card card">
-            <h3>Live Road Safety Overview <button class="mini-toggle-btn pop-btn" onclick="openResultPop('overview')">Pop View</button></h3>
-            <div class="stat-grid">
-                <div><span>Total accidents</span><strong id="stat-accidents">0</strong></div>
-                <div><span>Pothole points</span><strong id="stat-potholes">0</strong></div>
-                <div><span>Hazard reports</span><strong id="stat-hazards">0</strong></div>
-                <div><span>Black spots</span><strong id="stat-blackspots">0</strong></div>
+    <nav class="top-nav" id="top-nav">
+        <div class="nav-brand">
+            <div class="nav-logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <circle cx="14" cy="14" r="13" stroke="#3b82f6" stroke-width="1.5"/>
+                    <path d="M14 6 L14 14 L20 14" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="14" cy="14" r="2.5" fill="#3b82f6"/>
+                </svg>
             </div>
-            <div class="risk-strip"><div id="risk-fill"></div></div>
-            <p class="small-line">Current risk: <strong id="risk-val">N/A</strong> | Location: <strong id="current-location">Maharashtra</strong> | Safety score: <strong id="safety-score">--</strong></p>
-        </article>
-
-        <article class="glass-card card primary-risk-card">
-            <h3>AI Risk Insights <button class="mini-toggle-btn pop-btn" onclick="openResultPop('ai')">Pop View</button></h3>
-            <p><strong>Status:</strong> <span id="sim-status">Idle</span> | <strong>Risk:</strong> <span id="live-risk">N/A</span></p>
-            <p><strong>AI confidence:</strong> <span id="live-confidence">--</span> | <strong>Risk probability:</strong> <span id="live-probability">--</span></p>
-            <p><strong>Model mode:</strong> <span id="model-mode-badge" class="model-mode-badge">--</span></p>
-            <p id="user-summary" class="summary-box">Select any map point to get a user-friendly AI explanation.</p>
-            <p class="action-box"><strong>Recommended action:</strong> <span id="action-recommendation">--</span></p>
-            <h4>Top reasons</h4>
-            <ul id="top-reasons-list"></ul>
-            <button id="top-reasons-toggle" class="mini-toggle-btn" style="display:none;">Show more</button>
-            <h4>Nearby road context</h4>
-            <ul id="nearby-stats-list"></ul>
-            <button id="nearby-stats-toggle" class="mini-toggle-btn" style="display:none;">Show more</button>
-            <h4>Safer nearby detour option</h4>
-            <ul id="safe-zone-list"></ul>
-        </article>
-
-        <article class="glass-card card">
-            <h3>Community & Alerts <button class="mini-toggle-btn pop-btn" onclick="openResultPop('community')">Pop View</button></h3>
-            <h4>Live alerts</h4>
-            <ul id="alerts-list"></ul>
-            <button id="alerts-toggle" class="mini-toggle-btn" style="display:none;">Show more</button>
-            <h4>Recent hazard / prediction feed</h4>
-            <ul id="history-list"></ul>
-            <button id="history-toggle" class="mini-toggle-btn" style="display:none;">Show more</button>
-        </article>
-    </section>
-
-    <section class="right-stack">
-        <article class="glass-card card">
-            <h3>Quick Commute Assistant (Start Here)</h3>
-            <p id="quick-summary">Enter start/end and click <strong>Plan My Trip</strong> for one clear recommendation.</p>
-            <ul id="quick-commute-list">
-                <li>Recommended route: --</li>
-                <li>Should I avoid this trip?: --</li>
-                <li>Best time to travel: --</li>
-                <li>Main caution: --</li>
-            </ul>
-        </article>
-
-        <article class="glass-card card">
-            <h3>Route Recommendation <button class="mini-toggle-btn pop-btn" onclick="openResultPop('route')">Pop View</button></h3>
-            <p><strong>Recommended route:</strong> <span id="route-recommendation">--</span></p>
-            <p><strong>Overall route risk:</strong> <span id="route-risk-result">--</span></p>
-            <p><strong>Overall trip safety:</strong> <span id="trip-safety-score">--</span>/100</p>
-            <p><strong>Route difficulty level:</strong> <span id="route-difficulty">--</span></p>
-            <p><strong>Safest:</strong> <span id="safest-route">--</span> | <strong>Balanced:</strong> <span id="balanced-route">--</span> | <strong>Fastest:</strong> <span id="fastest-route">--</span></p>
-            <p><strong>Should I avoid this route now?</strong> <span id="avoid-message">--</span></p>
-            <p><strong>Best travel time suggestion:</strong> <span id="best-time">--</span> (<span id="best-time-score">--</span>/100)</p>
-            <ul id="time-advisor-list"></ul>
-            <h4>Why this is safer than fastest</h4>
-            <ul id="route-explainability-list"></ul>
-        </article>
-
-        <article class="glass-card card">
-            <h3>Route Comparison Cards</h3>
-            <div id="route-cards" class="route-cards"></div>
-            <h4>Checkpoint warnings</h4>
-            <ul id="route-checkpoints"></ul>
-            <button id="route-checkpoints-toggle" class="mini-toggle-btn" style="display:none;">Show more</button>
-            <h4>Potholes by route (distance from start)</h4>
-            <ul id="route-pothole-insights"><li>No route analyzed yet.</li></ul>
-            <button id="route-pothole-insights-toggle" class="mini-toggle-btn" style="display:none;">Show more</button>
-        </article>
-
-        <article class="glass-card card">
-            <h3>Emergency Support & District Insights</h3>
-            <ul id="emergency-list"></ul>
-            <details class="advanced-block">
-                <summary>Open advanced district analytics</summary>
-                <h4>Risk Calibration Note</h4>
-                <p class="calibration-note">
-                    Risk output is calibrated for realistic balance using bounded local aggregation and threshold tuning,
-                    so results do not unrealistically stay in one class.
-                </p>
-                <button onclick="copyVivaCalibrationNote()" id="copy-calibration-btn">Copy Viva Calibration Note</button>
-                <h4>District Rankings</h4>
-                <p><strong>Top risky district:</strong> <span id="top-district">--</span></p>
-                <ul id="district-ranking-list"></ul>
-                <h4>District comparison</h4>
-                <div class="control-row">
-                    <input id="d1" placeholder="District 1" />
-                    <input id="d2" placeholder="District 2" />
-                    <button onclick="compareDistricts()">Compare</button>
-                </div>
-                <ul id="district-compare-list"></ul>
-                <h4>Accident trend</h4>
-                <canvas id="trendsChart" height="120"></canvas>
-            </details>
-        </article>
-    </section>
-
-    <aside class="legend glass-card">
-        <h4>Map Layers</h4>
-        <p><span class="dot red"></span> Accidents</p>
-        <p><span class="dot orange"></span> Potholes</p>
-        <p><span class="dot yellow"></span> Intersections</p>
-        <p><span class="dot blue"></span> Hazard reports</p>
-        <p><span class="dot darkred"></span> Black spots</p>
-        <label><input id="acc-heat" type="checkbox" checked /> Accident heatmap</label>
-        <label><input id="haz-heat" type="checkbox" checked /> Hazard heatmap</label>
-        <label><input id="comb-heat" type="checkbox" checked /> Combined heatmap</label>
-    </aside>
-
-    <datalist id="location-options"></datalist>
-    <div id="location-suggest-box" class="location-suggest-box" style="display:none;"></div>
-    <div id="result-pop-modal" class="result-pop-modal" style="display:none;">
-        <div class="result-pop-card">
-            <div class="result-pop-head">
-                <strong id="result-pop-title">Section Summary</strong>
-                <button class="mini-toggle-btn" onclick="closeResultPop()">Close</button>
+            <div>
+                <span class="nav-title">SafeRoute <strong>AI</strong></span>
+                <span class="nav-subtitle">Maharashtra Smart Road Intelligence</span>
             </div>
-            <ul id="result-pop-list"></ul>
+        </div>
+        <div class="nav-status">
+            <span class="pulse-dot" id="pulse-dot"></span>
+            <span id="nav-status-text">Live Monitoring Active</span>
+        </div>
+        <div class="nav-weather">
+            <span id="weather-icon">☀️</span>
+            <span id="weather-label">Clear</span>
+            <span class="nav-divider">|</span>
+            <span id="time-label">Day</span>
+        </div>
+        <div id="loading-indicator" class="nav-loader" style="display:none;">
+            <div class="mini-loader"></div>
+        </div>
+    </nav>
+
+    <div class="alert-ribbon" id="alert-ribbon">
+        <div class="ribbon-inner">
+            <span class="ribbon-badge" id="ribbon-badge">LIVE</span>
+            <span id="ribbon-text">AI road safety system online — click any location to analyze risk.</span>
         </div>
     </div>
 
-    <button id="info-bar-toggle-btn" onclick="toggleInfoBar()">Hide Info Bar</button>
-    <button id="map-focus-btn" onclick="toggleMapFocus()">Show Panels</button>
+    <aside class="sidebar-left" id="sidebar-left">
+        <section class="panel search-panel">
+            <h3 class="panel-title">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.242 1.156a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg>
+                Location Analysis
+            </h3>
+            <div class="search-row">
+                <div class="search-field-wrap">
+                    <input id="citySearch" type="text" class="search-input" placeholder="Search city or locality…" autocomplete="off" />
+                    <div id="location-suggest-box" class="suggest-dropdown" style="display:none;"></div>
+                </div>
+                <button class="btn-primary" onclick="searchCity()">Analyze</button>
+            </div>
+            <button class="btn-ghost full-width" onclick="useMyLocation()">
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="3"/><path d="M8 0v2M8 14v2M0 8h2M14 8h2"/></svg>
+                Use My GPS Location
+            </button>
+        </section>
+
+        <section class="panel route-panel">
+            <h3 class="panel-title">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M1 0 0 1l2.5 2.5L2 5h2l.5-.5L7 7l-3.5 3.5.5.5H6l8-8-.5-.5L10 6 8.5 4.5l.5-2H7l-1.5 1.5L3 1.5 2 1 1 0zm5 6l4-4 1 1-4 4-1-1z"/></svg>
+                Route Planner
+            </h3>
+            <div class="route-inputs">
+                <div class="route-field">
+                    <span class="route-dot dot-green"></span>
+                    <input id="routeStart" type="text" class="search-input" placeholder="Start location" autocomplete="off" />
+                </div>
+                <div class="route-connector-line"></div>
+                <div class="route-field">
+                    <span class="route-dot dot-red"></span>
+                    <input id="routeEnd" type="text" class="search-input" placeholder="Destination" autocomplete="off" />
+                </div>
+            </div>
+            <div class="btn-row">
+                <button class="btn-primary flex-1" onclick="planMyTrip()">Plan Trip</button>
+                <button class="btn-secondary" onclick="analyzeRoute()">Compare</button>
+                <button class="btn-ghost" onclick="resetView()">Reset</button>
+            </div>
+            <div class="trip-summary" id="trip-summary" style="display:none;">
+                <div class="trip-tag" id="trip-tag">Analyzing…</div>
+                <p id="trip-reco-text" class="trip-text"></p>
+            </div>
+        </section>
+
+        <section class="panel demo-panel">
+            <div class="demo-row">
+                <button class="btn-demo" onclick="startGuidedDemo()" id="guided-demo-btn">▶ Guided Demo</button>
+                <button class="btn-ghost" onclick="demoReset()" id="demo-reset-btn">↺ Reset</button>
+            </div>
+            <p id="demo-narration" class="demo-text">Click "Guided Demo" for an automatic walkthrough of Maharashtra road risk zones.</p>
+        </section>
+
+        <section class="panel hazard-panel">
+            <h3 class="panel-title">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                Report Hazard
+            </h3>
+            <p class="panel-sub">Select type, enable reporting, then tap map.</p>
+            <div class="hazard-types">
+                <button class="hazard-chip active" data-type="pothole" onclick="selectHazardType('pothole', this)">🕳 Pothole</button>
+                <button class="hazard-chip" data-type="accident" onclick="selectHazardType('accident', this)">🚨 Accident</button>
+                <button class="hazard-chip" data-type="waterlogging" onclick="selectHazardType('waterlogging', this)">💧 Flood</button>
+                <button class="hazard-chip" data-type="roadblock" onclick="selectHazardType('roadblock', this)">🚧 Block</button>
+            </div>
+            <button class="btn-warn full-width" id="reportBtn" onclick="toggleReporting()">Enable Map Reporting</button>
+            <div id="hazard-success" class="hazard-success" style="display:none;">✓ Hazard reported successfully</div>
+        </section>
+    </aside>
+
+    <aside class="sidebar-right" id="sidebar-right">
+
+        <section class="panel risk-card" id="risk-card">
+            <div class="risk-header">
+                <span class="risk-label-text">AI RISK ASSESSMENT</span>
+                <span class="model-badge" id="model-badge">Ensemble ML</span>
+            </div>
+            <div class="risk-display">
+                <div class="risk-gauge-wrap">
+                    <svg class="risk-gauge" viewBox="0 0 120 70" width="120" height="70">
+                        <path d="M10,60 A50,50 0 0,1 110,60" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+                        <path id="gauge-arc" d="M10,60 A50,50 0 0,1 110,60" fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="157" style="transition:stroke-dashoffset 0.8s ease, stroke 0.5s;"/>
+                        <text id="gauge-pct" x="60" y="58" text-anchor="middle" font-size="18" font-weight="700" fill="#f1f5f9" font-family="Space Mono">--</text>
+                        <text x="60" y="69" text-anchor="middle" font-size="6.5" fill="#64748b" font-family="DM Sans">CONFIDENCE</text>
+                    </svg>
+                </div>
+                <div class="risk-details">
+                    <div class="risk-level-badge" id="risk-level-badge">—</div>
+                    <div class="risk-location" id="risk-location">Select a location</div>
+                    <div class="safety-row">
+                        <span class="safety-label">Safety</span>
+                        <div class="safety-bar-wrap"><div class="safety-bar-fill" id="safety-bar"></div></div>
+                        <span id="safety-score-val" class="safety-val">--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel ai-reasons-panel" id="ai-reasons-panel">
+            <h3 class="panel-title">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+                Why This Risk Level?
+            </h3>
+            <ul id="reasons-list" class="reasons-list">
+                <li class="reason-item reason-neutral"><span class="reason-icon">ℹ</span>Run a prediction to see AI explanations</li>
+            </ul>
+            <div class="action-box" id="action-box" style="display:none;">
+                <div class="action-icon-box">⚡</div>
+                <p id="action-recommendation" class="action-text"></p>
+            </div>
+            <p id="user-summary" class="user-summary-text" style="display:none;"></p>
+        </section>
+
+        <section class="panel contrib-panel" id="contrib-panel" style="display:none;">
+            <h3 class="panel-title">Risk Factor Breakdown</h3>
+            <div id="contrib-bars" class="contrib-bars"></div>
+        </section>
+
+        <section class="panel nearby-panel" id="nearby-panel" style="display:none;">
+            <h3 class="panel-title">Nearby Road Context</h3>
+            <div class="stat-grid-2" id="nearby-stats-grid"></div>
+            <div class="safe-zone-box" id="safe-zone-box" style="display:none;">
+                <span class="safe-zone-icon">🛡</span>
+                <div>
+                    <div class="safe-zone-label">Safer Zone Detected</div>
+                    <p id="safe-zone-text" class="safe-zone-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel route-results-panel" id="route-results-panel" style="display:none;">
+            <h3 class="panel-title">Route Analysis</h3>
+            <div class="route-result-cards" id="route-cards"></div>
+            <div class="route-meta" id="route-meta"></div>
+            <ul id="route-explainability-list" class="feed-list"></ul>
+            <ul id="route-checkpoints" class="feed-list"></ul>
+            <ul id="route-pothole-insights" class="feed-list"></ul>
+        </section>
+
+        <section class="panel emergency-panel" id="emergency-panel" style="display:none;">
+            <h3 class="panel-title">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="#ef4444"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/><path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 1 1 9.5 6.5z"/></svg>
+                Emergency Services
+            </h3>
+            <div id="emergency-list" class="emergency-list"></div>
+        </section>
+
+        <section class="panel feed-panel">
+            <h3 class="panel-title">Live Feed</h3>
+            <div class="feed-tabs">
+                <button class="feed-tab active" onclick="switchFeedTab('alerts', this)">Alerts</button>
+                <button class="feed-tab" onclick="switchFeedTab('history', this)">History</button>
+            </div>
+            <ul id="alerts-list" class="feed-list"></ul>
+            <ul id="history-list" class="feed-list" style="display:none;"></ul>
+        </section>
+
+        <details class="panel district-panel">
+            <summary class="district-summary">
+                <span>District Intelligence</span>
+                <svg class="chevron" width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+            </summary>
+            <div class="district-content">
+                <p class="panel-sub">Riskiest district: <strong id="top-district">—</strong></p>
+                <ul id="district-ranking-list" class="feed-list"></ul>
+                <div class="compare-row">
+                    <input id="d1" class="search-input" placeholder="District 1" />
+                    <input id="d2" class="search-input" placeholder="District 2" />
+                    <button class="btn-secondary" onclick="compareDistricts()">Compare</button>
+                </div>
+                <ul id="district-compare-list" class="feed-list"></ul>
+                <h4 class="subsection-title">Accident Trends</h4>
+                <canvas id="trendsChart" height="100"></canvas>
+            </div>
+        </details>
+    </aside>
+
+    <div class="map-legend" id="map-legend">
+        <div class="legend-title">Map Legend</div>
+        <div class="legend-item"><span class="ldot" style="background:#ef4444"></span>Accident Zone</div>
+        <div class="legend-item"><span class="ldot" style="background:#f97316"></span>Pothole Area</div>
+        <div class="legend-item"><span class="ldot" style="background:#eab308"></span>Intersection</div>
+        <div class="legend-item"><span class="ldot" style="background:#3b82f6"></span>Hazard Report</div>
+        <div class="legend-item"><span class="ldot" style="background:#7f1d1d"></span>Black Spot</div>
+        <div class="legend-sep"></div>
+        <div class="legend-risk-row">
+            <span class="legend-risk low">LOW</span>
+            <span class="legend-risk medium">MED</span>
+            <span class="legend-risk high">HIGH</span>
+        </div>
+        <div class="legend-sep"></div>
+        <label class="legend-check"><input type="checkbox" id="acc-heat" checked onchange="toggleHeatLayer('acc')"> Accident Heat</label>
+        <label class="legend-check"><input type="checkbox" id="haz-heat" checked onchange="toggleHeatLayer('haz')"> Hazard Heat</label>
+        <label class="legend-check"><input type="checkbox" id="comb-heat" checked onchange="toggleHeatLayer('comb')"> Combined Heat</label>
+    </div>
+
+    <div class="stats-bar" id="stats-bar">
+        <div class="stat-item">
+            <span class="stat-val" id="stat-accidents">—</span>
+            <span class="stat-lbl">Accidents</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+            <span class="stat-val" id="stat-potholes">—</span>
+            <span class="stat-lbl">Potholes</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+            <span class="stat-val" id="stat-hazards">—</span>
+            <span class="stat-lbl">Hazards</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+            <span class="stat-val" id="stat-blackspots">—</span>
+            <span class="stat-lbl">Black Spots</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item wide">
+            <span class="stat-val loc-val" id="current-location">Maharashtra</span>
+            <span class="stat-lbl">Active Location</span>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+    <datalist id="location-options"></datalist>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
