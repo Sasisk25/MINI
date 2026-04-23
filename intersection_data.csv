@@ -1,30 +1,49 @@
 id,city,district,latitude,longitude,intersection_name,risk_level,traffic_density
-1,Mumbai,Mumbai,19.064706,72.907876,Mumbai Junction 1,Low,92
-2,Mumbai,Mumbai,19.067396,72.903028,Mumbai Junction 2,High,98
-3,Mumbai,Mumbai,19.071131,72.867856,Mumbai Junction 3,High,86
-4,Navi Mumbai,Thane,19.030014,73.01381,Navi Mumbai Junction 1,Medium,96
-5,Navi Mumbai,Thane,19.052809,73.029918,Navi Mumbai Junction 2,High,98
-6,Thane,Thane,19.196877,73.010066,Thane Junction 1,Low,93
-7,Thane,Thane,19.209011,72.981584,Thane Junction 2,Low,98
-8,Thane,Thane,19.250818,72.988039,Thane Junction 3,Medium,97
-9,Thane,Thane,19.187652,73.013287,Thane Junction 4,Medium,91
-10,Pune,Pune,18.530617,73.843492,Pune Junction 1,Low,98
-11,Pune,Pune,18.491542,73.880222,Pune Junction 2,High,90
-12,Nashik,Nashik,20.007106,73.792477,Nashik Junction 1,Low,94
-13,Nashik,Nashik,20.029011,73.812888,Nashik Junction 2,Medium,95
-14,Nagpur,Nagpur,21.117934,79.073138,Nagpur Junction 1,Medium,98
-15,Nagpur,Nagpur,21.125679,79.107716,Nagpur Junction 2,Low,98
-16,Nagpur,Nagpur,21.108483,79.093791,Nagpur Junction 3,High,82
-17,Aurangabad,Aurangabad,19.897197,75.373441,Aurangabad Junction 1,High,98
-18,Aurangabad,Aurangabad,19.863567,75.369001,Aurangabad Junction 2,Low,98
-19,Aurangabad,Aurangabad,19.845051,75.371016,Aurangabad Junction 3,Low,90
-20,Kolhapur,Kolhapur,16.675199,74.235083,Kolhapur Junction 1,Low,98
-21,Kolhapur,Kolhapur,16.728784,74.215293,Kolhapur Junction 2,Low,94
-22,Kolhapur,Kolhapur,16.68334,74.26108,Kolhapur Junction 3,Low,88
-23,Solapur,Solapur,17.677503,75.917692,Solapur Junction 1,Low,70
-24,Solapur,Solapur,17.675416,75.909818,Solapur Junction 2,Medium,98
-25,Solapur,Solapur,17.640044,75.894056,Solapur Junction 3,Medium,98
-26,Ahmednagar,Ahmednagar,19.069328,74.780676,Ahmednagar Junction 1,High,98
-27,Ahmednagar,Ahmednagar,19.101471,74.740068,Ahmednagar Junction 2,Medium,98
-28,Ahmednagar,Ahmednagar,19.09176,74.783783,Ahmednagar Junction 3,Medium,88
-29,Ahmednagar,Ahmednagar,19.067068,74.754898,Ahmednagar Junction 4,High,96
+1,Mumbai,Mumbai,19.040627,72.915228,Mumbai Junction 1,Medium,63
+2,Mumbai,Mumbai,19.106703,72.91192,Mumbai Junction 2,Medium,70
+3,Mumbai,Mumbai,19.115593,72.851612,Mumbai Junction 3,High,80
+4,Mumbai,Mumbai,19.067699,72.898359,Mumbai Junction 4,Medium,70
+5,Navi Mumbai,Thane,19.048682,73.002012,Navi Mumbai Junction 1,Low,32
+6,Navi Mumbai,Thane,19.058267,73.007655,Navi Mumbai Junction 2,Low,42
+7,Navi Mumbai,Thane,19.010905,73.032658,Navi Mumbai Junction 3,Low,39
+8,Navi Mumbai,Thane,19.040435,73.036107,Navi Mumbai Junction 4,High,98
+9,Thane,Thane,19.185619,73.008297,Thane Junction 1,High,92
+10,Thane,Thane,19.199548,72.948461,Thane Junction 2,Low,40
+11,Thane,Thane,19.2494,73.014552,Thane Junction 3,Medium,70
+12,Thane,Thane,19.24727,73.002861,Thane Junction 4,Low,45
+13,Pune,Pune,18.532819,73.860769,Pune Junction 1,Medium,72
+14,Pune,Pune,18.487359,73.849376,Pune Junction 2,Medium,77
+15,Pune,Pune,18.510215,73.83748,Pune Junction 3,Low,45
+16,Nashik,Nashik,20.015374,73.78947,Nashik Junction 1,Low,43
+17,Nashik,Nashik,19.963984,73.767415,Nashik Junction 2,Low,40
+18,Nashik,Nashik,20.012161,73.75589,Nashik Junction 3,Low,60
+19,Nagpur,Nagpur,21.173897,79.087812,Nagpur Junction 1,High,98
+20,Nagpur,Nagpur,21.144247,79.095593,Nagpur Junction 2,High,90
+21,Nagpur,Nagpur,21.171774,79.076025,Nagpur Junction 3,High,85
+22,Aurangabad,Aurangabad,19.890441,75.348559,Aurangabad Junction 1,High,92
+23,Aurangabad,Aurangabad,19.857562,75.37359,Aurangabad Junction 2,Low,57
+24,Kolhapur,Kolhapur,16.728794,74.255976,Kolhapur Junction 1,Medium,78
+25,Kolhapur,Kolhapur,16.733047,74.272684,Kolhapur Junction 2,Low,51
+26,Solapur,Solapur,17.676569,75.933361,Solapur Junction 1,Low,41
+27,Solapur,Solapur,17.675698,75.920811,Solapur Junction 2,Low,51
+28,Solapur,Solapur,17.669389,75.926617,Solapur Junction 3,High,84
+29,Solapur,Solapur,17.632588,75.93687,Solapur Junction 4,Medium,70
+30,Ahmednagar,Ahmednagar,19.124547,74.71034,Ahmednagar Junction 1,Medium,74
+31,Ahmednagar,Ahmednagar,19.120865,74.71831,Ahmednagar Junction 2,High,89
+32,Ahmednagar,Ahmednagar,19.08161,74.767481,Ahmednagar Junction 3,Low,38
+33,Nerul,Thane,19.006661,73.045337,Nerul Junction 1,High,97
+34,Nerul,Thane,19.060371,73.020497,Nerul Junction 2,Low,52
+35,Seawoods,Thane,18.981511,73.000663,Seawoods Junction 1,High,91
+36,Seawoods,Thane,19.030354,73.056195,Seawoods Junction 2,Medium,58
+37,Belapur,Thane,19.026145,73.018884,Belapur Junction 1,Low,48
+38,Belapur,Thane,19.02632,73.041299,Belapur Junction 2,High,82
+39,Kharghar,Raigad,19.069388,73.038358,Kharghar Junction 1,High,90
+40,Kharghar,Raigad,19.067882,73.073101,Kharghar Junction 2,High,98
+41,Kharghar,Raigad,19.084039,73.05715,Kharghar Junction 3,Medium,69
+42,Panvel,Raigad,19.00001,73.152062,Panvel Junction 1,High,96
+43,Panvel,Raigad,18.957601,73.152478,Panvel Junction 2,High,77
+44,Panvel,Raigad,19.004431,73.082927,Panvel Junction 3,High,86
+45,Panvel,Raigad,18.973477,73.134154,Panvel Junction 4,Low,56
+46,Ulwe,Raigad,18.964788,73.042674,Ulwe Junction 1,Low,49
+47,Ulwe,Raigad,18.987071,73.045773,Ulwe Junction 2,High,84
+48,Ulwe,Raigad,18.963059,73.065823,Ulwe Junction 3,Medium,78
